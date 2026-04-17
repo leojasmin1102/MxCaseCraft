@@ -1,0 +1,27 @@
+D:\anaconda\envs\MxCaseCraft\python.exe D:\DemoCode\MxCaseCraft\main.py 
+正在生成测试用例...
+[生成器] 开始构建提示词...
+[生成器] 提示词长度: 591 字符
+[生成器] 调用Claude API生成测试用例...
+[API] 正在调用Claude API...
+[API] 模型: claude-sonnet-4-6
+[API] Base URL: https://www.ccvibe.cn
+[API] 请求发送中，等待响应...
+Traceback (most recent call last):
+  File "D:\DemoCode\MxCaseCraft\main.py", line 63, in <module>
+    main()
+  File "D:\DemoCode\MxCaseCraft\main.py", line 52, in main
+    test_cases = generator.generate_test_cases(requirement, test_plan, example_cases)
+  File "D:\DemoCode\MxCaseCraft\test_case_generator.py", line 22, in generate_test_cases
+    response = self.client.generate_content(prompt)
+  File "D:\DemoCode\MxCaseCraft\claude_client.py", line 25, in generate_content
+    message = self.client.messages.create(
+  File "D:\anaconda\envs\MxCaseCraft\lib\site-packages\anthropic\_utils\_utils.py", line 283, in wrapper
+    return func(*args, **kwargs)
+  File "D:\anaconda\envs\MxCaseCraft\lib\site-packages\anthropic\resources\messages\messages.py", line 1000, in create
+    return self._post(
+  File "D:\anaconda\envs\MxCaseCraft\lib\site-packages\anthropic\_base_client.py", line 1368, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "D:\anaconda\envs\MxCaseCraft\lib\site-packages\anthropic\_base_client.py", line 1141, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.AuthenticationError: Error code: 401 - {'code': 'INVALID_API_KEY', 'message': 'Invalid API key'}
