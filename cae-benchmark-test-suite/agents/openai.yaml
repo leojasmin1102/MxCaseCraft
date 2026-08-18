@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAE对标测试套件"
+  short_description: "分阶段生成并逐项确认CAE对标算例、Tcl脚本及测试交付物"
+  default_prompt: "使用 $cae-benchmark-test-suite，根据参考软件、关键字、验证需求、所属模块、测试用例范围和测试用例类型规划测试；逐项确认后生成对应算例和 Tcl。"
